@@ -14,7 +14,7 @@ extern "C" {
     pub fn _PyImport_ReleaseLock() -> c_int;
     #[cfg(not(Py_3_9))]
     pub fn _PyImport_FindBuiltin(name: *const c_char, modules: *mut PyObject) -> *mut PyObject;
-    #[cfg(not(Py_3_11))]
+    // #[cfg(not(Py_3_11))]
     pub fn _PyImport_FindExtensionObject(a: *mut PyObject, b: *mut PyObject) -> *mut PyObject;
     pub fn _PyImport_FixupBuiltin(
         module: *mut PyObject,
